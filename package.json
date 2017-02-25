@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "express": "^4.14.1",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.6",
+    "mongoose": "^4.8.4",
+    "nodemon": "^1.11.0"
+  },
+  "name": "node-todo",
+  "version": "1.0.0",
+  "description": "Project to create a To Do list tool using node and related web technologies",
+  "main": "index.js",
+  "devDependencies": {
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
