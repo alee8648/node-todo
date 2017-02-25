@@ -16,7 +16,12 @@ app.set('view engine', 'handlebars');
 
 
 // Routes
-app.get('/', function(req, res) {
+var Todo = require('models/todos.js');
+app.post('/', function(req, res, next) {
+	next();
+});
+
+app.all('/', function(req, res, next) {
 	res.render('index');
 });
 
