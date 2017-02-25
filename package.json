@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
     "express": "^4.14.1",
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.6",
@@ -10,8 +12,7 @@
   "version": "1.0.0",
   "description": "Project to create a To Do list tool using node and related web technologies",
   "main": "index.js",
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
