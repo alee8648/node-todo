@@ -16,7 +16,8 @@
 				<span>{{text}}</span>
 				<input type="text" name="updateTodo" value="{{text}}" placeholder="{{text}}">
 				<input type="hidden" value="{{_id}}" name="todoId">
-				<input type="submit" value="Save">
+				<input type="submit" value="Save" name="action">
+				<input type="submit" value="Delete" name="action">
 			</form>
 		</li>
 	{{/each}}

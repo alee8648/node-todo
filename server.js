@@ -42,12 +42,20 @@ app.post('/', function(req, res, next) {
 
 	// Update existing items
 	if (req.body.updateTodo) {
-		Todo.update(
-			{'_id': req.body.todoId},
-			{'text': req.body.updateTodo}
-		).then(function() {
+		if (req.body.action && req.body.action === 'Delete') {
+			Todo.remove({'_id': req.body.todoId}, function(err) {
+				if (err) {console.log("error", err);}
+			});
 			next();
-		});
+
+		} else {
+			Todo.update(
+				{'_id': req.body.todoId},
+				{'text': req.body.updateTodo}
+			).then(function() {
+				next();
+			});
+		}
 	}
 	
 	
