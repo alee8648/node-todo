@@ -6,12 +6,21 @@
 </form>
 
 {{#if todos}}
-<ul class="todo-list">
-	
 
-{{#each todos}}
-	<li class="todo-item" data-id="{{_id}}"><span>{{text}}</span>
-	<input type="text" name="todo[]" value="{{text}}" placeholder="{{text}}"></li>
-{{/each}}
-</ul>
+	<ul class="todo-list">
+		
+	
+	{{#each todos}}
+		<li class="todo-item" data-id="{{_id}}">
+			<form action="/" method="post" id="update-{{_id}}">
+				<span>{{text}}</span>
+				<input type="text" name="updateTodo" value="{{text}}" placeholder="{{text}}">
+				<input type="hidden" value="{{_id}}" name="todoId">
+				<input type="submit" value="Save">
+			</form>
+		</li>
+	{{/each}}
+	</ul>
+
+</form>
 {{/if}}

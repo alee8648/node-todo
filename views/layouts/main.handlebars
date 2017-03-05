@@ -23,7 +23,7 @@
 	$(document).ready(function() {
 		$('.todo-item').on('click', function(e) {
 			$(this).find('span').hide();
-			$(this).find('input').show().focus();
+			$(this).find('input').show()[0].focus();
 		});
 	});
 </script>

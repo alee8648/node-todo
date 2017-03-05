@@ -26,14 +26,30 @@ app.set('view engine', 'handlebars');
 // Routes
 var Todo = require('./models/todos.js');
 app.post('/', function(req, res, next) {
-	var todo = new Todo({
-		text: req.body.item
-	});
-	todo.save()
-	.then(function() {
-		console.log("Todo saved!");
-		next();
-	});
+	console.log(req.body);
+
+	// New item
+	if (req.body.item) {
+		var todo = new Todo({
+			text: req.body.item
+		});
+		todo.save()
+		.then(function() {
+			console.log("Todo saved!");
+			next();
+		});
+	}
+
+	// Update existing items
+	if (req.body.updateTodo) {
+		Todo.update(
+			{'_id': req.body.todoId},
+			{'text': req.body.updateTodo}
+		).then(function() {
+			next();
+		});
+	}
+	
 	
 });
 
