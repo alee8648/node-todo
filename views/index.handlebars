@@ -4,3 +4,13 @@
 	<label for="item">Add new item: </label><input type="text" name="item" required="true">
 	<input type="submit">
 </form>
+
+{{#if todos}}
+<ul>
+	
+
+{{#each todos}}
+	<li>{{text}}</li>
+{{/each}}
+</ul>
+{{/if}}

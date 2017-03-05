@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "body-parser": "^1.17.0",
     "bootstrap": "^3.3.7",
     "bootstrap-sass": "^3.3.7",
     "express": "^4.14.1",
