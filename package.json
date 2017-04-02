@@ -14,7 +14,11 @@
   "version": "1.0.0",
   "description": "Project to create a To Do list tool using node and related web technologies",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
